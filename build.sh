@@ -2,5 +2,5 @@
 
 set -e
 rm -fr ./out
-dotnet restore ./hwapp
-dotnet publish -c Release -o ./out ./hwapp
+dotnet restore ./hwweb
+dotnet publish -c Release -o ./out ./hwweb

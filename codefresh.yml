@@ -11,7 +11,7 @@ steps:
 
   buildimage:
     type: build
-    image_name: dzirkler/dotnetcorehelloworld
+    image_name: dzirkler/aspnetcorehelloworld
     dockerfile: Dockerfile
     tag: ${{CF_BRANCH}}
 

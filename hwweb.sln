@@ -1,7 +1,15 @@
 
 Microsoft Visual Studio Solution File, Format Version 15.00
 # Visual Studio 2017
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "hwweb", "hwweb/hwweb.csproj", "{93EABEEC-EDB6-44C0-ABFA-395DF9F0EBA9}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "hwweb", "hwweb\hwweb.csproj", "{93EABEEC-EDB6-44C0-ABFA-395DF9F0EBA9}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{5CB9B89D-F3FD-4FC1-A0E5-190D458AD6D9}"
+	ProjectSection(SolutionItems) = preProject
+		build.sh = build.sh
+		codefresh.yml = codefresh.yml
+		Dockerfile = Dockerfile
+		README.md = README.md
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
