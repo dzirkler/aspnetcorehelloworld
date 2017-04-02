@@ -6,8 +6,8 @@ This was set up as a proof-of-concept to perform a CodeFresh build for an ASP.NE
 the `/hwweb` folder, and is simply the result of a `dotnet new mvc -o hwweb` command.
 
 I wanted to be able to use [CodeFresh](http://codefresh.io) to enable Continuous Integration for ASP.NET Core apps.
-Microsoft provides both `[aspnet](https://hub.docker.com/r/microsoft/aspnet/)` (runtime) and 
-`[aspnet-build](https://hub.docker.com/r/microsoft/aspnet-build/)` builds for ASP.NET Core. Unforutnately, to build an 
+Microsoft provides both [`aspnet`](https://hub.docker.com/r/microsoft/aspnet/) (runtime) and 
+[`aspnet-build`](https://hub.docker.com/r/microsoft/aspnet-build/) builds for ASP.NET Core. Unforutnately, to build an 
 ASP.NET Core app from source code, you need to use the `aspnet-build`, which includes a lot of extra bulk. I've chosen 
 to pre-compile using the SDK. Once you have the files built, you can use the built files in the `aspnet` container. 
 This enables us to have a smaller container, and only contain the minimum to run our application (which also enhances 
