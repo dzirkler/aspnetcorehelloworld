@@ -1,0 +1,34 @@
+version: '1.0'
+
+steps:
+
+  pre_build:
+    title: Dotnet Build 
+    image: microsoft/dotnet:1.1.1-sdk
+    working_directory: ${{main_clone}}
+    commands:
+      - bash -c "./build.sh"
+
+  buildimage:
+    type: build
+    image_name: dzirkler/dotnetcorehelloworld
+    dockerfile: Dockerfile
+    tag: ${{CF_BRANCH}}
+
+  push_image:
+    type: push
+    candidate: ${{buildimage}}
+    tag: latest
+    when:
+      branch:
+        only:
+          - master
+
+  push_image1:
+    type: push
+    candidate: ${{buildimage}}
+    tag: ${{CF_BRANCH_TAG_NORMALIZED}}-${{CF_SHORT_REVISION}}
+    when:
+      condition:
+          all:
+            masterBranch: '"${{CF_BRANCH}}" != "master"'
