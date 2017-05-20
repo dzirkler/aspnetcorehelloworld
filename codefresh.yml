@@ -2,13 +2,6 @@ version: '1.0'
 
 steps:
 
-  pre_build:
-    title: Dotnet Build 
-    image: microsoft/dotnet:1.1.1-sdk
-    working_directory: ${{main_clone}}
-    commands:
-      - bash -c "./build.sh"
-
   buildimage:
     type: build
     image_name: dzirkler/aspnetcorehelloworld

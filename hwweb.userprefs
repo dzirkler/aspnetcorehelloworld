@@ -1,5 +1,11 @@
 ﻿<Properties StartupConfiguration="{93EABEEC-EDB6-44C0-ABFA-395DF9F0EBA9}|Default">
-  <MonoDevelop.Ide.Workbench />
+  <MonoDevelop.Ide.Workbench ActiveDocument="codefresh.yml">
+    <Files>
+      <File FileName="Dockerfile" Line="9" Column="1" />
+      <File FileName="build.sh" Line="7" Column="1" />
+      <File FileName="codefresh.yml" Line="20" Column="31" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
